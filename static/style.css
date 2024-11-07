@@ -1,0 +1,121 @@
+/* Reset and box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://iemlabs.com/blogs/wp-content/uploads/sites/4/2023/05/Privacy.webp') no-repeat center center fixed; /* Replace with your image URL */
+    background-size: cover; /* Cover the entire viewport */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative; /* For overlay effect */
+}
+
+/* Overlay for privacy effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+    z-index: 0; /* Place behind content */
+}
+
+/* Container for content */
+.container {
+    background: rgba(255, 255, 255, 0.10); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.2s; /* Animation effect */
+    position: relative; /* Ensure container is above overlay */
+    z-index: 1; /* Bring container above the overlay */
+}
+
+/* Hover effect on container */
+.container:hover {
+    transform: translateY(-1px); /* Lift effect on hover */
+}
+
+/* Headings styles */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #4A90E2; /* Color for the main heading */
+}
+
+h2 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color:  #f0f;
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color:  #f0f; /* Subtle color for paragraph */
+}
+
+/* Upload and camera section styles */
+.upload-section, .camera-section {
+    margin: 20px 0;
+}
+
+/* File input styles */
+input[type="file"] {
+    margin-bottom: 10px;
+    border: 2px dashed #4A90E2; /* Color for the dashed border */
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    background-color: #f9f9f9;
+    transition: border-color 0.3s; /* Transition for border color on focus */
+}
+
+/* Focus effect on file input */
+input[type="file"]:focus {
+    border-color: #357ABD; /* Change border color on focus */
+}
+
+/* Button styles */
+.btn {
+    background: linear-gradient(45deg, #4A90E2, #5BB5E4); /* Gradient button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Transition effects */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+/* Hover effect on button */
+.btn:hover {
+    background: linear-gradient(45deg, #357ABD, #4A90E2); /* Change gradient on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Footer styles */
+footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.8em;
+    color: #777;
+}
